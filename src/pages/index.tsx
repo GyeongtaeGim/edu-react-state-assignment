@@ -5,6 +5,7 @@ import CssModuleButton from "components/CssModuleButton";
 
 import flex from "styles/flex.module.css"
 import CssButton from "components/CssButton";
+import EmotionButton from "components/EmotionButton";
 
 const IndexPage = () => {
     return <>
@@ -13,9 +14,10 @@ const IndexPage = () => {
         </Helmet>
         <div className={flex.column}>
             <h1>IndexPage</h1>
-            <CssModuleButton>Hello</CssModuleButton>
-            <CssButton>Hello</CssButton>
-            <button className="button">Hello</button>
+            <CssButton>CSS Button</CssButton>
+            <button className="button">Class Button</button>
+            <CssModuleButton>CSS Module Button</CssModuleButton>
+            <EmotionButton>Emotion Button</EmotionButton>
             <Link to='/item'>move to item</Link>
         </div>
     </>
