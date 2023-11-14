@@ -6,6 +6,7 @@ import CssModuleButton from "components/CssModuleButton";
 import flex from "styles/flex.module.css"
 import CssButton from "components/CssButton";
 import EmotionButton from "components/EmotionButton";
+import VanillaExtractButton from "components/VanillaExtractButton";
 
 const IndexPage = () => {
     return <>
@@ -18,6 +19,7 @@ const IndexPage = () => {
             <button className="button">Class Button</button>
             <CssModuleButton>CSS Module Button</CssModuleButton>
             <EmotionButton>Emotion Button</EmotionButton>
+            <VanillaExtractButton>Vanilla Extract Button</VanillaExtractButton>
             <Link to='/item'>move to item</Link>
         </div>
     </>
