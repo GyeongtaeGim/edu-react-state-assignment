@@ -1,11 +1,10 @@
 import React from "react"
 import loadable from "@loadable/component"
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 
 const IndexPage = loadable(() => import('pages/index'))
 const ItemPage = loadable(() => import('pages/item'))
 const ItemDetailPage = loadable(() => import('pages/item/[id]'))
-
 
 const App = () => {
     return <Routes>
