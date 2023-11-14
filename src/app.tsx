@@ -1,17 +1,18 @@
 import React from "react"
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom"
+import loadable from "@loadable/component"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+
+const IndexPage = loadable(() => import('pages/index'))
+const ItemPage = loadable(() => import('pages/item'))
+const ItemDetailPage = loadable(() => import('pages/item/[id]'))
+
 
 const App = () => {
-    return <BrowserRouter>
-        <h6>안녕</h6>
-        <div><a href="/home">링크</a></div>
-        <div><Link to='/home'>링크</Link></div>
-        <Routes>
-            <Route path="/home" element={<h1>홈</h1>} />
-            <Route path="/create" element={<h2>생성</h2>} />
-            <Route path="/edit" element={<h3>수정</h3>} />
-        </Routes>
-    </BrowserRouter>
+    return <Routes>
+        <Route path="/" element={<IndexPage />} />
+        <Route path="/item" element={<ItemPage />} />
+        <Route path="/item/:id" element={<ItemDetailPage />} />
+    </Routes>
 }
 
 export default App;
