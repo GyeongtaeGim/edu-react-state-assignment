@@ -3,7 +3,6 @@ import path from 'path';
 import { readdirSync } from 'fs';
 
 import react from '@vitejs/plugin-react-swc';
-import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 
 const absolutePathAliases: { [key: string]: string } = {};
 const srcPath = path.resolve('./src/');
@@ -17,7 +16,7 @@ srcRootContent.forEach((directory) => {
 
 export default defineConfig({
   plugins: [
-    react(), vanillaExtractPlugin()
+    react()
   ],
   resolve: {
     alias: {
