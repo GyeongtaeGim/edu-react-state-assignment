@@ -1,5 +1,8 @@
 {
     "typescript.tsdk": "node_modules/typescript/lib",
     "editor.defaultFormatter": "vscode.typescript-language-features",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
